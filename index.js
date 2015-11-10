@@ -4,6 +4,7 @@
  * Unwrap a result into an object when necessary.
  *
  * @param {Function} fn Callback to receive the unwrapped stuff.¬
+ * @param {value} Default value if undefined is the result of the unwrapping
  * @returns {Function} The unwrap stuff.¬
  * @api public¬
  *
