@@ -1,5 +1,8 @@
 # unwrapper
 
+[![build
+status](https://secure.travis-ci.org/jcrugzz/unwrapper.svg)](http://travis-ci.org/jcrugzz/unwrapper)
+
 A simple module that unwraps an array when deemed necessary for the result
 passed to a given function. The threshold in which it is deemed necessary is
 determined by the length of the array returned. A length of 1 is assumed to be
