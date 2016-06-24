@@ -1,6 +1,6 @@
 {
   "name": "unwrapper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "unwrap an array from a function that receives `err, result`",
   "main": "index.js",
   "scripts": {
