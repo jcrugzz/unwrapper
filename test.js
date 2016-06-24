@@ -44,7 +44,7 @@ describe('unwrapper', function () {
 
   it('returns the first element if the first element satisfies the predicate', function () {
     var unwrapper = unwrap(assumeObject, function (obj) {
-      return !obj.hi;
+      return obj.hi;
     });
 
     unwrapper(undefined, [{ hi: true }]);
