@@ -4,7 +4,7 @@
   "description": "unwrap an array from a function that receives `err, result`",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "istanbul cover _mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/jcrugzz/unwrapper/issues"
   },
-  "homepage": "https://github.com/jcrugzz/unwrapper#readme"
+  "homepage": "https://github.com/jcrugzz/unwrapper#readme",
+  "devDependencies": {
+    "assume": "^1.4.1",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
+  }
 }

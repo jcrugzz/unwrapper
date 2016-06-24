@@ -9,13 +9,25 @@
  * @api public¬
  *
  */
-module.exports = function unwrapper(fn, def) {
+module.exports = function unwrapper(fn, def, pred) {
+  if (typeof def === 'function' && !pred) {
+    pred = def;
+    def = undefined;
+  }
+
   return function (err, results) {
     if (err) return fn(err);
 
-    return fn(undefined, (results
-      && results.length <= 1
-        ? results[0]
-        : results) || def);
+    var unwrap;
+    if (results && typeof results[0] !== 'undefined') {
+      unwrap = results.length <= 1
+      if (unwrap && pred) {
+        unwrap = pred(results[0])
+      };
+    }
+
+    return fn(undefined, unwrap
+      ? results[0] || def
+      : results);
   }
 };
