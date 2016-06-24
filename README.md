@@ -42,7 +42,7 @@ unwrap(fn);
 In some scenarios you may want to only unwrap certain Arrays of length one (e.g. listing directories of a length 1). In this case you can pass a `pred` argument to `unwrapper`:
 
 ``` js
-unwrap(fn, function (result) {
+unwrap(fn, function (err, result) {
   //
   // Result will always be the first element in the Array
   // - return true to unwrap
